@@ -2,5 +2,16 @@ import numpy as np
 import pandas as pd 
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_boston
-
 %matplotlib inline
+
+boston = load_boston()
+print(boston.DESCR)
+
+features = pd.DataFrame(boston.data, columns = boston.feature_names)
+target = pd.DataFrame(boston.target, columns= ['Target'])
+data= pd.concat([features, target], axis=1)
+
+data2 = data.corr('pearson')
+data2
+
+abs(data2.loc['Target']).sort_values(ascending=False)
