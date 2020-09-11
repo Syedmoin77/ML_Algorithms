@@ -1,1 +1,6 @@
-https://colab.research.google.com/drive/1BCaciESfGR8I1Hvf8JM7Xf9T5I9LxZ1U?usp=sharing
+import numpy as np
+import pandas as pd 
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_boston
+
+%matplotlib inline
